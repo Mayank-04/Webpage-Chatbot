@@ -31,13 +31,17 @@ prompt = ChatPromptTemplate.from_template(
     Question: {input}
     '''
 )
+input1 = st.text_input("Enter the webpage to search from.")
+
+if st.button("Load Webpage"):
+    st.write("Webpage is loaded, now click on Documents Embedding.")
 
 def vector_embeddings():
 
     if "vectors" not in st.session_state:
         st.session_state.embeddings = OllamaEmbeddings(model = "llama3.2")
         # st.session_state.loader = PyPDFLoader("acsbr-016.pdf")
-        st.session_state.loader = WebBaseLoader("https://lilianweng.github.io/posts/2023-06-23-agent/")
+        st.session_state.loader = WebBaseLoader(input1)
         st.session_state.documents = st.session_state.loader.load()
 
         st.session_state.text_splitter = RecursiveCharacterTextSplitter(chunk_size = 1000, chunk_overlap = 200)
