@@ -54,9 +54,10 @@ Run the chatbot locally:
 ```
 streamlit run app.py
 ```
-1.Enter the URL of a webpage.
-2.Ask a question about that page.
-3.The chatbot will only respond using that page’s content.
+---
+1. Enter the URL of a webpage.
+2. Ask a question about that page.
+3. The chatbot will only respond using that page’s content.
 
 🧠 Models
 
