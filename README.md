@@ -62,7 +62,7 @@ streamlit run app.py
 🧠 Models
 
 This chatbot uses:
-• Groq Compound-Beta-Mini for fast inference
-• Meta’s LLaMA 3.2 for high-quality reasoning
+- Groq Compound-Beta-Mini for fast inference
+- Meta’s LLaMA 3.2 for high-quality reasoning
 
 Models are accessed via the Groq Cloud API.
